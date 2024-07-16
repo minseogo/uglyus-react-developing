@@ -331,7 +331,7 @@ p {
     font-size: 13px;
     color: #E86969;
     position: absolute;
-    top: 14px;
+    top: -53px;
     margin-left: 58px;
     font-weight: 700;
   }
@@ -346,7 +346,7 @@ p {
     font-size: 13px;
     font-family: 'pretendard';
     position: absolute;
-    top: 28px;
+    top: -39px;
     margin-left: 60px;
     color: #B2AFB0;
   }
@@ -355,7 +355,7 @@ p {
     font-size: 13px;
     font-family: 'pretendard';
     position: absolute;
-    top: 28px;
+    top: -39px;
     margin-left: 108px;
     color: #B2AFB0;
   }
@@ -363,7 +363,7 @@ p {
   .usernaver_profile{
     width: 30px;
     position: absolute;
-    top: 20px;
+    top: -47px;
     right: 60px;
   }
   
