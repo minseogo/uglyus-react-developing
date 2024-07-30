@@ -26,8 +26,8 @@ function ReviewComponent() {
             <span className="review_background"></span>
   
             <div className="text-center d-flex justify-content-center align-items-center flex-column">
-              <h2 class = "font_con_title_e mt-0 mb-5">Review</h2>
-              <p class = "font_leadcopy mt-0 mb-5">구매자 분들의 진심을 담은 실제 후기 입니다.</p>
+              <h2 className = "font_con_title_e mt-0 mb-5">Review</h2>
+              <p className = "font_leadcopy mt-0 mb-5">구매자 분들의 진심을 담은 실제 후기 입니다.</p>
           </div>
                 <div className="container">
                 <Swiper
@@ -75,8 +75,8 @@ function ReviewComponent() {
             <div className="usernaver_rating review_text d-flex border-bottom">
               <div className="col-6 border-end">
                 <p className="user_score">사용자 총 평점</p>
-                <p className=" user_score_count_size fw-bold f_30">4.9</p>
-                <p className=" user_score_star">★★★★★</p>
+                <p className=" user_score_count_size fw-bold f_30">{naver.totalScore}</p>
+                <p className=" user_score_star">{naver.userScore}</p>
               </div>
               <div className="col-6 px-3">
                 <p className="rating">평점 비율</p>
@@ -237,7 +237,7 @@ function ReviewComponent() {
         </div>
         <div className="insta_reviewbox_article position-relative">
           <p className="insta_reviewbox_article_f">{instagram.followerimageUrlFname}<span className="fw-bold">{instagram.likes}</span>이 좋아합니다</p>
-          <p className="insta_reviewbox_article_s"><span className="fw-bold f_11">jennierubyjane</span>{instagram.post}</p>              
+          <p className="insta_reviewbox_article_s"><span className="fw-bold f_11">{instagram.userName}</span>{instagram.post}</p>              
           <p className="insta_reviewbox_article_t">{instagram.hashTag}</p>
         </div>
     </div>
@@ -345,8 +345,8 @@ function ReviewComponent() {
             <div className="usernaver_rating review_text d-flex border-bottom">
               <div className="col-6 border-end">
                 <p className="user_score">사용자 총 평점</p>
-                <p className=" user_score_count_size fw-bold f_30">4.9</p>
-                <p className=" user_score_star">★★★★★</p>
+                <p className=" user_score_count_size fw-bold f_30">{naver.totalScore}</p>
+                <p className=" user_score_star">{naver.userScore}</p>
               </div>
               <div className="col-6 px-3">
                 <p className="rating">평점 비율</p>
@@ -507,7 +507,7 @@ function ReviewComponent() {
         </div>
         <div className="insta_reviewbox_article position-relative">
           <p className="insta_reviewbox_article_f">{instagram.followerimageUrlFname}<span className="fw-bold">{instagram.likes}</span>이 좋아합니다</p>
-          <p className="insta_reviewbox_article_s"><span className="fw-bold f_11">jennierubyjane</span>{instagram.post}</p>              
+          <p className="insta_reviewbox_article_s"><span className="fw-bold f_11">{instagram.userName}</span>{instagram.post}</p>              
           <p className="insta_reviewbox_article_t">{instagram.hashTag}</p>
         </div>
     </div>
@@ -604,8 +604,7 @@ function ReviewComponent() {
         </div>
       </div>
      </SwiperSlide>
-    </Swiper>
-               
+  </Swiper>
   </div>
   <div class="btn_wrap_gms d-flex justify-content-center flex-column align-items-center">
     <button class="btn_gms rounded-pill border-0 text-white text-center p-0 m-0 font_button">더보기</button>
