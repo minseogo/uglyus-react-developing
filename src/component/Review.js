@@ -1,15 +1,15 @@
 import React, {useEffect, useState} from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay} from 'swiper/modules';
-import '../css/gms.css'
+import { Autoplay } from 'swiper/modules';
+import '../css/reviewgms.css'
 import '../css/common.css'
 
-import dataReivew from '../data/data.json'
+import datareview from '../data/data.json'
 
 function ReviewComponent() {
   const [slider, setSlider] = useState(0);
 
-  const { naver, twitter, instagram, naverBlog, youtube } = dataReivew;
+  const { naver, twitter, instagram, naverBlog, youtube } = datareview;
 
   useEffect(() => {
     const swiperWrapper = document.querySelector('.swiper-wrapper');
@@ -22,7 +22,7 @@ function ReviewComponent() {
  
     return(
         
-        <section className="review_gms">
+        <section id="review_gms">
             <span className="review_background"></span>
   
             <div className="text-center d-flex justify-content-center align-items-center flex-column">
@@ -117,7 +117,7 @@ function ReviewComponent() {
           </div>
             <div className="usernaver_review_article mt-2">
               <div className="text-start mx-2">
-                <p className="usernaver_reivew_title">스토어 PICK</p>
+                <p className="usernaver_review_title">스토어 PICK</p>
                 <p className="usernaver_review_subtitle fw-lighter">판매자가 직접 선정한 베스트 리뷰입니다.</p>
               </div>
               <div className="d-flex justify-content-between mt-2">
@@ -163,7 +163,7 @@ function ReviewComponent() {
               <p className="usernaver_box_text fw-medium">선물하기</p>
             </div>
             <div className="buy_box d-flex justify-content-evenly align-items-center">
-              <img className="naver_circle_icon" src="/img/naver_icon-circle.png" alt="" />
+              <img className="naver_circle_icon" src="/img/review/naver_icon-circle.png" alt="" />
               <p className="usernaver_box_text fw-medium">구매하기</p>
             </div>
           </div>
@@ -173,7 +173,7 @@ function ReviewComponent() {
         <div className="reviewbox review_text bg-white">
           <div className="d-flex justify-content-between align-items-center px-2 pt-2">
             <p className="twitter_profile fw-lighter rounded-circle d-flex justify-content-center align-items-center text-white f_13  mt-0 ms-0">민서</p>
-            <img className="twitter_logo" src="/img/free-icon-twitter-5968958.png" alt="" />
+            <img className="twitter_logo" src="/img/review/free-icon-twitter-5968958.png" alt="" />
             <i className="bi bi-gear twitter_setting "></i>
           </div>
           <div className="twitter_top_text d-flex border-bottom">
@@ -188,7 +188,7 @@ function ReviewComponent() {
                     <span className="twitter_reviewbox_user_nikname f_11 mx-0 ms-2">{twitter.twitterName}</span>  
                   </p>
                 </div>
-                <div className="twitter_reviewbox_reivew_text f_11">
+                <div className="twitter_reviewbox_review_text f_11">
                   <span>{twitter.post}</span>
                 </div>  
             </div>            
@@ -200,7 +200,7 @@ function ReviewComponent() {
             <div className="py-2 px-3 d-flex align-items-center justify-content-between ">
               <i className="bi bi-house-door-fill"></i>
               <i className="bi bi-search"></i>
-              <img className="twitter_followingicon" src="/img/following.png"alt="" />
+              <img className="twitter_followingicon" src="/img/review/following.png"alt="" />
               <i className="bi bi-bell-fill"></i>
               <i className="bi bi-envelope"></i>
             </div>
@@ -226,7 +226,7 @@ function ReviewComponent() {
           <div className="insta_reiviewbox_icon d-flex">
             <i className="bi bi-heart-fill ms-1"></i>
             <i className="bi bi-chat ms-3"></i>
-            <img className="insta_icon_send ms-3" src="./send.svg" alt="" />            
+            <img className="insta_icon_send ms-3" src="./review/send.svg" alt="" />            
           </div>
         </div>
         
@@ -246,11 +246,11 @@ function ReviewComponent() {
       <div className="reviewbox review_text bg-white">
                   <div className="d-flex align-items-center justify-content-between youtube_icon mt-1 mx-2">
                     <div>
-                      <img className="youtube_logo" src="/img/youtube.logo.png" alt="" />
+                      <img className="youtube_logo" src="/img/review/youtube.logo.png" alt="" />
                     </div>
                     <div>
-                      <i className="bi bi-cast me-1"></i>
-                      <i className="bi bi-bell me-1"></i>
+                      <i className="bi bi-cast me-3"></i>
+                      <i className="bi bi-bell me-3"></i>
                       <i className="bi bi-search"></i>
                     </div>
 
@@ -275,7 +275,7 @@ function ReviewComponent() {
                   </div>
                     <div className=" youtube_bottom_icon mt-5 d-flex align-items-center justify-content-around">
                       <i className="bi bi-house-door-fill"></i>
-                      <img className="youtube_bottom_icon_s" src="/img/Youtube Shorts Logo PNG Images (Transparent HD Photo Clipart).jpg" alt="" />
+                      <img className="youtube_bottom_icon_s" src="/img/review/Youtube Shorts Logo PNG Images (Transparent HD Photo Clipart).jpg" alt="" />
                       <i className="bi bi-plus-circle"></i>
                       <i className="bi bi-collection-play"></i>
                       <span className="youtube_profile fw-lighter rounded-circle f_11 justify-content-center align-items-center text-white">{youtube.profileName}</span>
@@ -285,7 +285,7 @@ function ReviewComponent() {
      <SwiperSlide className='naverblog d-flex justify-content-center align-items-center text-center'>
       <div className="reviewbox review_text bg-white">
         <div className="d-flex align-items-center justify-content-around naverblog_top_icon">
-          <img className="naverblog_logo" src="/img/naverblog_gms.png" alt="" />
+          <img className="naverblog_logo" src="/img/review/naverblog_gms.png" alt="" />
           <i className="bi bi-card-list"></i>
           <p className="naverblog_top_title f_13">{naverBlog.blogName}</p>
           <i className="bi bi-search"></i>
@@ -325,11 +325,11 @@ function ReviewComponent() {
           </p>
         </div>    
         <div className="naverblog_bottom_icon d-flex align-items-center justify-content-around border-top">
-          <img className="naverblog_bottom_naverlogo " src="./icon/free-icon-naver-11423248.png" alt="" />
+          <img className="naverblog_bottom_naverlogo " src="/img/review/free-icon-naver-11423248.png" alt="" />
           <i className="bi bi-arrow-left-short f_30"></i>
           <i className="bi bi-arrow-right-short f_30"></i>
           <i className="bi bi-arrow-clockwise"></i>
-          <img className="naverblog_bottom_ano_arrow" src="./icon/free-icon-arrow-right-4655041.png" alt="" />
+          <img className="naverblog_bottom_ano_arrow" src="/img/review/free-icon-arrow-right-4655041.png" alt="" />
           <i className="bi bi-list"></i>
         </div>
       </div>
@@ -387,7 +387,7 @@ function ReviewComponent() {
           </div>
             <div className="usernaver_review_article mt-2">
               <div className="text-start mx-2">
-                <p className="usernaver_reivew_title">스토어 PICK</p>
+                <p className="usernaver_review_title">스토어 PICK</p>
                 <p className="usernaver_review_subtitle fw-lighter">판매자가 직접 선정한 베스트 리뷰입니다.</p>
               </div>
               <div className="d-flex justify-content-between mt-2">
@@ -433,7 +433,7 @@ function ReviewComponent() {
               <p className="usernaver_box_text fw-medium">선물하기</p>
             </div>
             <div className="buy_box d-flex justify-content-evenly align-items-center">
-              <img className="naver_circle_icon" src="/img/naver_icon-circle.png" alt="" />
+              <img className="naver_circle_icon" src="/img/review/naver_icon-circle.png" alt="" />
               <p className="usernaver_box_text fw-medium">구매하기</p>
             </div>
           </div>
@@ -443,7 +443,7 @@ function ReviewComponent() {
         <div className="reviewbox review_text bg-white">
           <div className="d-flex justify-content-between align-items-center px-2 pt-2">
             <p className="twitter_profile fw-lighter rounded-circle d-flex justify-content-center align-items-center text-white f_13  mt-0 ms-0">민서</p>
-            <img className="twitter_logo" src="/img/free-icon-twitter-5968958.png" alt="" />
+            <img className="twitter_logo" src="/img/review/free-icon-twitter-5968958.png" alt="" />
             <i className="bi bi-gear twitter_setting "></i>
           </div>
           <div className="twitter_top_text d-flex border-bottom">
@@ -458,7 +458,7 @@ function ReviewComponent() {
                     <span className="twitter_reviewbox_user_nikname f_11 mx-0 ms-2">{twitter.twitterName}</span>  
                   </p>
                 </div>
-                <div className="twitter_reviewbox_reivew_text f_11">
+                <div className="twitter_reviewbox_review_text f_11">
                   <span>{twitter.post}</span>
                 </div>  
             </div>            
@@ -470,7 +470,7 @@ function ReviewComponent() {
             <div className="py-2 px-3 d-flex align-items-center justify-content-between ">
               <i className="bi bi-house-door-fill"></i>
               <i className="bi bi-search"></i>
-              <img className="twitter_followingicon" src="/img/following.png"alt="" />
+              <img className="twitter_followingicon" src="/img/review/following.png"alt="" />
               <i className="bi bi-bell-fill"></i>
               <i className="bi bi-envelope"></i>
             </div>
@@ -496,7 +496,7 @@ function ReviewComponent() {
           <div className="insta_reiviewbox_icon d-flex">
             <i className="bi bi-heart-fill ms-1"></i>
             <i className="bi bi-chat ms-3"></i>
-            <img className="insta_icon_send ms-3" src="./send.svg" alt="" />            
+            <img className="insta_icon_send ms-3" src="./review/send.svg" alt="" />            
           </div>
         </div>
         
@@ -516,11 +516,11 @@ function ReviewComponent() {
       <div className="reviewbox review_text bg-white">
                   <div className="d-flex align-items-center justify-content-between youtube_icon mt-1 mx-2">
                     <div>
-                      <img className="youtube_logo" src="/img/youtube.logo.png" alt="" />
+                      <img className="youtube_logo" src="/img/review/youtube.logo.png" alt="" />
                     </div>
                     <div>
-                      <i className="bi bi-cast me-1"></i>
-                      <i className="bi bi-bell me-1"></i>
+                      <i className="bi bi-cast me-3"></i>
+                      <i className="bi bi-bell me-3"></i>
                       <i className="bi bi-search"></i>
                     </div>
 
@@ -545,7 +545,7 @@ function ReviewComponent() {
                   </div>
                     <div className=" youtube_bottom_icon mt-5 d-flex align-items-center justify-content-around">
                       <i className="bi bi-house-door-fill"></i>
-                      <img className="youtube_bottom_icon_s" src="/img/Youtube Shorts Logo PNG Images (Transparent HD Photo Clipart).jpg" alt="" />
+                      <img className="youtube_bottom_icon_s" src="/img/review/Youtube Shorts Logo PNG Images (Transparent HD Photo Clipart).jpg" alt="" />
                       <i className="bi bi-plus-circle"></i>
                       <i className="bi bi-collection-play"></i>
                       <span className="youtube_profile fw-lighter rounded-circle f_11 justify-content-center align-items-center text-white">{youtube.profileName}</span>
@@ -555,7 +555,7 @@ function ReviewComponent() {
      <SwiperSlide className='naverblog d-flex justify-content-center align-items-center text-center'>
       <div className="reviewbox review_text bg-white">
         <div className="d-flex align-items-center justify-content-around naverblog_top_icon">
-          <img className="naverblog_logo" src="/img/naverblog_gms.png" alt="" />
+          <img className="naverblog_logo" src="/img/review/naverblog_gms.png" alt="" />
           <i className="bi bi-card-list"></i>
           <p className="naverblog_top_title f_13">{naverBlog.blogName}</p>
           <i className="bi bi-search"></i>
@@ -595,11 +595,11 @@ function ReviewComponent() {
           </p>
         </div>    
         <div className="naverblog_bottom_icon d-flex align-items-center justify-content-around border-top">
-          <img className="naverblog_bottom_naverlogo " src="./icon/free-icon-naver-11423248.png" alt="" />
+          <img className="naverblog_bottom_naverlogo " src="/img/review/free-icon-naver-11423248.png" alt="" />
           <i className="bi bi-arrow-left-short f_30"></i>
           <i className="bi bi-arrow-right-short f_30"></i>
           <i className="bi bi-arrow-clockwise"></i>
-          <img className="naverblog_bottom_ano_arrow" src="./icon/free-icon-arrow-right-4655041.png" alt="" />
+          <img className="naverblog_bottom_ano_arrow" src="/img/review/free-icon-arrow-right-4655041.png" alt="" />
           <i className="bi bi-list"></i>
         </div>
       </div>

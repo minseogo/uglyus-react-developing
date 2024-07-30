@@ -1,0 +1,338 @@
+/*
+
+   퍼블리서 :고민서
+   컨텐츠 : 스토어 컴포넌트
+
+*/
+// info 타이틀 폰트 
+#store_gms .font_title_kk{
+    font-family: "Pretendard";
+    font-size: 45px;
+    font-weight: 700;
+    color: #1f2937;
+    letter-spacing: -0.5px;
+    line-height: 3rem;
+    width: 100%;
+}
+// info 서브타이틀 폰트 
+#store_gms .font_subtitle_kk{
+    font-family: "Pretendard";
+    font-size: 22px;
+    font-weight: 700;
+    color: #414b5a;
+    letter-spacing: -0.5px;
+    line-height: 1.8rem;
+    width: 100%;
+}
+// info 내용 폰트
+#store_gms .font_textt{
+    font-family: "Pretendard";
+    font-size: 16px;
+    font-weight: 400;
+    color: #414b5a;
+    letter-spacing: -0.5px;
+    line-height: 1.5rem;
+    width: 100%;
+}
+#store_gms .swiper{
+    margin: 0;
+    margin-top: -15rem;
+    width: 100%;
+}
+#store_gms .swiper-slide .imglayout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#store_gms .swiper-slide {
+    width:560px;
+        .bg, 
+        .info {
+            display: none;
+        }
+        img {
+        max-height: 100%;
+        transition: transform 0.3s ease;
+        object-fit: cover;
+        transform: scale(0.5);
+        transform-origin: center;
+        }
+      &.swiper-slide-active {
+        z-index: 10000;
+        width:560px;
+        
+        .bg  {
+            display: flex;
+            position: relative;
+            }
+        .png{
+            transform: scale(1);
+            position: relative;
+        }
+        .info  {
+            display: flex;
+            margin-bottom: 4rem;
+
+        }
+        .scaled-image  {
+            z-index: 10000 !important;
+        }
+        .imglayout{
+            position: relative;
+            &::before{
+               content: "";
+               display: block;
+               position: absolute;
+               background-size: contain;
+               background-repeat: no-repeat;
+               background-position: center center;
+               background-size: 100%;                   
+            }
+        }
+        .mushroom_png{
+            transform: scale(1.3);
+            left: -3rem;
+            top: -25px;
+        }
+        &.mushroom{
+            .imglayout{
+                &::before{
+                    left: -117px;
+                    top: -100px;
+                    width: 120%;
+                    height: 165%;
+                    background-image: url(../img/store/Mushroom.svg);                    
+                }
+            }
+        }
+        .paprika_png{
+            top: -4rem;
+        }
+        &.paprika{
+            .imglayout{
+                &::before{
+                    left: -63px;
+                    top: -5rem;
+                    width: 120%;
+                    height: 120%;
+                   background-image: url(../img/store/paprika.svg);                    
+                }
+            }
+        }
+        .cucumber_png{
+            top: -70px;
+            left: -3rem;
+            transform: scale(1.2);
+        }
+        &.cucumber{
+            .imglayout{
+                &::before{
+                    left: -68px;
+                    top: -80px;
+                    width: 110%;
+                    height: 110%;
+                   background-image: url(../img/store/cucumber.svg);                    
+                }
+            }
+            .info{
+                margin-bottom: 2rem;
+                margin-left: 3rem;
+            }
+        }
+        .carrot_png{
+            transform: scale(1.2);
+        }
+        &.carrot{
+            .imglayout{
+                &::before{
+                    left: -6rem;
+                    top: -4rem;
+                    width: 140%;
+                    height: 140%;
+                   background-image: url(../img/store/carrot.svg);                    
+                }
+            }
+        }
+
+        .bok_choy_png{
+            transform: scale(1.3);
+            left: -2rem;
+            top: -4rem;
+        }
+        &.bok_choy{
+            .imglayout{
+                &::before{
+                    top: -6rem;
+                    left: -4rem;
+                    width: 140%;
+                    height: 145%;
+                   background-image: url(../img/store/bok_choy.svg);                    
+                }
+            }
+            .info{
+                margin-left: 5rem;
+                margin-top: 2rem;
+            }
+        }
+        .lemon_png{
+            left: 1rem;
+            top: -28px;
+        }
+        &.lemon{
+            .imglayout{
+                &::before{
+                    left: -2rem;
+                    top: -70px;
+                    width: 115%;
+                    height: 135%;
+                   background-image: url(../img/store/lemon.svg);                    
+                }
+            }
+            .info{
+                margin-top: 2rem;
+                margin-left: 2rem;
+            }
+        }
+        // 버섯 이미지, 백그라운드
+    }
+}
+// // 채소구하기 버튼
+#store_gms .store_btn {
+background-color: #FE663F;
+border: none;
+border-radius: 20px;
+color: white;
+width: 115px;
+height: 37px;
+margin-top: 3rem;
+}
+@media (max-width: 990px) {
+    // width:100vw;
+    #store_gms .font_title_kk {
+        font-size: 40px;
+    }
+    #store_gms .font_subtitle_kk {
+        font-size: 20px;
+    }
+    #store_gms .font_textt {
+        font-size: 14px;
+    }
+    #store_gms .swiper-slide-active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; // align-items도 추가하여 중앙 정렬이 제대로 되도록 합니다.
+    }
+    #store_gms .swiper-slide-active{
+        .img_lg_p{
+            padding-top: 6rem;
+        }
+        .imglayout {
+            transform: scale(0.7);
+        }
+        .media{
+            text-align: center;
+            align-items: center !important;
+        }
+    } 
+    #store_gms .store_btn {
+        margin: 0;
+    }
+    #store_gms .swiper-slide.swiper-slide-active.bok_choy .info {
+        margin-left: 0;
+        margin-top: 0;
+      }
+      #store_gms .swiper-slide {
+        &.swiper-slide-active {
+            justify-content: center !important;
+          .cucumber_png {
+            top: -128px;
+            left: -3rem;
+            transform: scale(1.2);
+          }
+      
+          &.cucumber {
+            .imglayout::before {
+                left: -68px;
+                top: -138px;
+                width: 110%;
+                height: 110%;
+                background-image: url(../img/store/cucumber.svg);
+            }
+            .info {
+                margin-left: -43px;
+                margin-top: -62px;
+            }
+          }
+          .carrot_png {
+            top: -26px;
+            left: 4rem;
+            transform: scale(1.2);
+          }
+      
+          &.carrot {
+            .imglayout::before {
+                left: -28px;
+                top: -88px;
+                width: 130%;
+                height: 130%;
+                background-image: url(../img/store/carrot.svg);
+            }
+            .info{
+                margin-left: -43px !important;
+            }
+          }
+          .mushroom_png {
+            top: 35px;
+            left: 1px;
+            transform: scale(1.2);
+          }
+          &.mushroom {
+            .imglayout::before {
+                left: -62px;
+                top: -30px;
+                width: 110%;
+                height: 150%;
+                background-image: url(../img/store/mushroom.svg);
+            }
+            .info {
+                margin-top: 129px !important;
+                margin-left: 1px !important; 
+            }
+          }
+          .bok_choy_png {
+            top: -22px;
+            left: -1rem;
+            transform: scale(1.2);
+          }
+          &.bok_choy {
+            .imglayout::before {
+                top: -3rem;
+                left: -3rem;
+                width: 140%;
+                height: 145%;
+               background-image: url(../img/store/bok_choy.svg);   
+            }
+            .info {
+                margin-top: 74px;
+            }
+        }
+        
+        &.paprika{
+            .info{
+                margin-left: -44px !important ; 
+            }
+        }
+        
+        &.lemon{
+            .info{
+                margin-left: -43px !important;
+            }
+        }
+    }
+}
+    #store_gms .swiper-pagination{
+        display: none;
+    }
+}
