@@ -1,13 +1,12 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
 import '../css/storegms.css'
 import '../css/common.css'
 
-// Swiper 모듈을 사용하도록 설정
-
 const Store = () => {
   return (
-    <div id="store_gms" className="overflow-hidden">
+    <div id="store" className="overflow-hidden">
       <div className="container-fluid text-center">
         <h2 className="font_con_title_k mb-4">개성있지만 싱싱해요</h2>
         <div className="d-none d-lg-flex justify-content-center">
@@ -28,15 +27,12 @@ const Store = () => {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           }}
-          pagination={{
-            el: '.swiper-pagination',
-            clickable: true,
-          }}
+          pagination={true} modules={[Pagination]}
         >
             <SwiperSlide className="paprika d-flex justify-content-between align-items-center pt-5 pt-md-0">
                 <div className="col-6 img_lg_p mt-5">
                 <div className="imglayout pt-5">
-                    <img className="paprika_png png scaled-image img-fluid" src="/img/store/paprika.png" alt="" />
+                    <img className="paprika_png png scaled-image img-fluid" src="./img/store/paprika.png" alt="" />
                 </div>
                 </div>
                 <div className="info text-nowrap col-6 ms-5 mb-5">
@@ -50,11 +46,10 @@ const Store = () => {
                 </div>
                 </div>
             </SwiperSlide>
-
             <SwiperSlide className="swiper-slide lemon d-flex justify-content-between align-items-center pt-5 pt-md-0">
                 <div className="col-6 img_lg_p mt-5">
                     <div className="imglayout pt-5 ">
-                        <img className="lemon_png png scaled-image img-fluid " src="/img/store/lemon.png" alt="" />
+                        <img className="lemon_png png scaled-image img-fluid " src="./img/store/lemon.png" alt="" />
                     </div>
                 </div>
                 <div className="info text-nowrap col-6 ms-5">
@@ -68,12 +63,10 @@ const Store = () => {
                     </div>   
                 </div>         
             </SwiperSlide>
-
-
             <SwiperSlide className="swiper-slide cucumber d-flex justify-content-between align-items-center pt-5 pt-md-0">
                 <div className="col-6 img_lg_p mt-5">
                     <div className="imglayout pt-5">
-                        <img className="cucumber_png png scaled-image img-fluid " src="/img/store/cucumber.png" alt="" />
+                        <img className="cucumber_png png scaled-image img-fluid " src="./img/store/cucumber.png" alt="" />
                     </div>
                 </div>
                 
@@ -88,12 +81,10 @@ const Store = () => {
                     </div>    
                 </div>   
             </SwiperSlide>
-
-
             <SwiperSlide className="swiper-slide carrot d-flex justify-content-between align-items-center pt-5 pt-md-0">
                     <div className="col-6 img_lg_p mt-5">
                         <div className="imglayout pt-5"> 
-                            <img className="carrot_png png scaled-image img-fluid " src="/img/store/carrot.png" alt="" />
+                            <img className="carrot_png png scaled-image img-fluid " src="./img/store/carrot.png" alt="" />
                         </div>
                     </div>
                     
@@ -108,12 +99,10 @@ const Store = () => {
                         </div>
                     </div>        
             </SwiperSlide>
-
-
             <SwiperSlide className="swiper-slide mushroom d-flex justify-content-between align-items-center pt-5 pt-md-0">
                 <div className="col-6 img_lg_p mt-5">
                     <div className="imglayout pt-5">                         
-                        <img className="mushroom_png png scaled-image img-fluid " src="/img/store/mushroom.png" alt="" /> 
+                        <img className="mushroom_png png scaled-image img-fluid " src="./img/store/mushroom.png" alt="" /> 
                     </div>
                 </div>
                 
@@ -128,12 +117,10 @@ const Store = () => {
                     </div>
                 </div>
             </SwiperSlide>
-
-
             <SwiperSlide className="swiper-slide bok_choy d-flex justify-content-between align-items-center pt-5 pt-md-0">
                 <div className="col-6 img_lg_p mt-5">
                     <div className="imglayout pt-5">
-                        <img className="bok_choy_png png scaled-image img-fluid " src="/img/store/bok_choy.png" alt="" />
+                        <img className="bok_choy_png png scaled-image img-fluid " src="./img/store/bok_choy.png" alt="" />
                     </div>
                 </div>
                 
@@ -150,7 +137,7 @@ const Store = () => {
             </SwiperSlide>
         </Swiper>
       </div>
-      <div className="pagination_custom d-flex flex-column align-items-center justify-content-end vh-100">
+      <div className="pagination_custom section_blank d-flex flex-column align-items-center justify-content-end">
         <div className="swiper-pagination mt-auto"></div>
       </div>
     </div>
